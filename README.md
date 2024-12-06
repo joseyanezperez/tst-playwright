@@ -1,1 +1,1 @@
-Testing repository for playwright and cucubmer
+Testing repository for playwright and cucubmer integration together

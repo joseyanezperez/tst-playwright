@@ -1,15 +1,21 @@
 import { test, expect } from '@playwright/test';
+import BasePage from './class BasePage ';
 
-
+let basePage: BasePage;
 
 test.describe('group', {
   tag: '@tag1'
 }, () => {
-test('Given the title', async ({ page }) => {
-  await page.goto('https://www.zara.com/');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/ZARA Official/);
+
+
+  test('Given the title', async ({ page }) => {
+    let url ='https://www.zara.com/es'
+    let title='ZARA';
+    basePage = new BasePage(page,url)
+    
+  await basePage.goToUrl()
+  await basePage.checkTitle(title);
 })
 
 

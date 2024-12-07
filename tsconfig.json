@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",         // Use ES Modules
+      "target": "ESNext",         // Modern JS syntax
+      "moduleResolution": "Node", // Resolve imports properly
+      "outDir": "./dist",         // Compiled JS output directory
+      "strict": true,             // Optional: Enforce strict typing
+      "esModuleInterop": true     // Allows seamless CommonJS imports
+    }
+  }

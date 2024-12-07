@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
-      "module": "ESNext",         // Use ES Modules
-      "target": "ESNext",         // Modern JS syntax
+      "module": "ES2022",         // Use ES Modules
+      "target": "ES2022",         // Modern JS syntax
       "moduleResolution": "Node", // Resolve imports properly
       "outDir": "./dist",         // Compiled JS output directory
       "strict": true,             // Optional: Enforce strict typing
-      "esModuleInterop": true     // Allows seamless CommonJS imports
+      "esModuleInterop": true,
+      "sourceMap": true     // Allows seamless CommonJS imports
     }
   }

@@ -1,13 +1,25 @@
 import { test, expect } from '@playwright/test';
+import BasePage from './class BasePage ';
 
-test('has title', async ({ page }) => {
-await page.goto('https://www.zara.com/');
+let basePage: BasePage;
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/ZARA Official/);
-});
+test.describe('group', {
+  tag: '@tag1'
+}, () => {
 
-/*test('get started link', async ({ page }) => {
+
+
+  test('Given the title', async ({ page }) => {
+    let url ='https://www.zara.com/es'
+    let title='ZARA';
+    basePage = new BasePage(page,url)
+    
+  await basePage.goToUrl()
+  await basePage.checkTitle(title);
+})
+
+
+test('get started link',{tag: ['@tag2', '@tag3']},async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Click the get started link.
@@ -15,4 +27,5 @@ await page.goto('https://www.zara.com/');
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});*/
+});
+});

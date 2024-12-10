@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 5
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -96,10 +96,12 @@
           "column": 6,
           "specs": [
             {
-              "title": "Given the title",
+              "title": "get started link",
               "ok": true,
               "tags": [
-                "tag1"
+                "tag1",
+                "tag2",
+                "tag3"
               ],
               "tests": [
                 {
@@ -112,48 +114,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8480,
+                      "duration": 1496,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-07T15:51:28.264Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a30a6eba6312f6b87ea5-242b459f330a8a10023b",
-              "file": "example.spec.ts",
-              "line": 12,
-              "column": 7
-            },
-            {
-              "title": "get started link",
-              "ok": true,
-              "tags": [
-                "tag1",
-                "tag2",
-                "tag3"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 3550,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-07T15:51:28.267Z",
+                      "startTime": "2024-12-10T09:34:33.410Z",
                       "attachments": []
                     }
                   ],
@@ -166,40 +132,6 @@
               "column": 5
             },
             {
-              "title": "Given the title",
-              "ok": true,
-              "tags": [
-                "tag1"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 8086,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-07T15:51:28.270Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a30a6eba6312f6b87ea5-435515cb986bf65b3e5d",
-              "file": "example.spec.ts",
-              "line": 12,
-              "column": 7
-            },
-            {
               "title": "get started link",
               "ok": true,
               "tags": [
@@ -216,14 +148,14 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 5073,
+                      "duration": 1083,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-07T15:51:28.270Z",
+                      "startTime": "2024-12-10T09:34:33.413Z",
                       "attachments": []
                     }
                   ],
@@ -236,40 +168,6 @@
               "column": 5
             },
             {
-              "title": "Given the title",
-              "ok": true,
-              "tags": [
-                "tag1"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "status": "passed",
-                      "duration": 7625,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-07T15:51:28.265Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a30a6eba6312f6b87ea5-dbeec9cbbc18c7d33ced",
-              "file": "example.spec.ts",
-              "line": 12,
-              "column": 7
-            },
-            {
               "title": "get started link",
               "ok": true,
               "tags": [
@@ -286,14 +184,14 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 3545,
+                      "duration": 1622,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-07T15:51:33.543Z",
+                      "startTime": "2024-12-10T09:34:33.410Z",
                       "attachments": []
                     }
                   ],
@@ -312,9 +210,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-07T15:51:28.009Z",
-    "duration": 10993.706,
-    "expected": 6,
+    "startTime": "2024-12-10T09:34:33.094Z",
+    "duration": 4709.092,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

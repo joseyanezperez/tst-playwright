@@ -1,7 +1,11 @@
 Testing repository for playwright and cucubmer integration together
 
-Run with playwright: npx playwright test
-Run with Cucumber: npx cucumber-js --tags @SimpleTes
+-Run with playwright: 
+    ->Full test: npx playwright test
+    ->Only label: npx playwright test --grep @tag2
+-Run with Cucumber: 
+    ->Full: npx ts-node ./node_modules/.bin/cucumber-js
+    ->Only label: npx ts-node ./node_modules/.bin/cucumber-js --tags @SimpleTest1
 
 
 Pending points:

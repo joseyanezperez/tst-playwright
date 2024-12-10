@@ -1,5 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig, cucumberReporter } from "playwright-bdd";
 
+const testDir = defineBddConfig({
+  features: "e2e/playwright-bdd/features/*.feature",
+  steps: "e2e/playwright-bdd/steps/*.ts",
+});
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -12,7 +17,8 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './e2e',
+  //testDir: './e2e',
+  testDir,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -28,7 +34,7 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: true,
+    headless: false,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -43,7 +49,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+    /*{
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },

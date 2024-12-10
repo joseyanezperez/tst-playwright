@@ -1,7 +1,7 @@
 {
   "config": {
     "configFile": "/Users/jose.yanez/Projects/fenix/tst-playwright/playwright.config.ts",
-    "rootDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/e2e",
+    "rootDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/.features-gen",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,35 +39,7 @@
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/e2e",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/e2e",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/e2e",
+        "testDir": "/Users/jose.yanez/Projects/fenix/tst-playwright/.features-gen",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -77,31 +49,30 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.49.0",
+    "version": "1.49.1",
     "workers": 5,
     "webServer": null
   },
   "suites": [
     {
-      "title": "example.spec.ts",
-      "file": "example.spec.ts",
+      "title": "e2e/playwright-bdd/features/sample.feature.spec.js",
+      "file": "e2e/playwright-bdd/features/sample.feature.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "group",
-          "file": "example.spec.ts",
-          "line": 6,
+          "title": "Playwright Home Page",
+          "file": "e2e/playwright-bdd/features/sample.feature.spec.js",
+          "line": 4,
           "column": 6,
           "specs": [
             {
-              "title": "get started link",
+              "title": "Check title 3",
               "ok": true,
               "tags": [
-                "tag1",
-                "tag2",
-                "tag3"
+                "Tag1,",
+                "Tag2"
               ],
               "tests": [
                 {
@@ -114,94 +85,36 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 1496,
+                      "duration": 1146,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-12-10T09:34:33.410Z",
+                      "steps": [
+                        {
+                          "title": "Given I am on Playwright home page",
+                          "duration": 546
+                        },
+                        {
+                          "title": "When I click link \"Get started\"",
+                          "duration": 72
+                        },
+                        {
+                          "title": "Then I see in title \"Installation\"",
+                          "duration": 108
+                        }
+                      ],
+                      "startTime": "2024-12-10T19:14:14.681Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "a30a6eba6312f6b87ea5-1ab94c08a5c81beabc15",
-              "file": "example.spec.ts",
-              "line": 22,
-              "column": 5
-            },
-            {
-              "title": "get started link",
-              "ok": true,
-              "tags": [
-                "tag1",
-                "tag2",
-                "tag3"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 1083,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-10T09:34:33.413Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a30a6eba6312f6b87ea5-cfb9c3efdbafb0303daa",
-              "file": "example.spec.ts",
-              "line": 22,
-              "column": 5
-            },
-            {
-              "title": "get started link",
-              "ok": true,
-              "tags": [
-                "tag1",
-                "tag2",
-                "tag3"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 1622,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-12-10T09:34:33.410Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "a30a6eba6312f6b87ea5-1b6f3aef882c7b5d82fb",
-              "file": "example.spec.ts",
-              "line": 22,
-              "column": 5
+              "id": "ab8c74f3802b3a095570-f717658e611229c5b303",
+              "file": "e2e/playwright-bdd/features/sample.feature.spec.js",
+              "line": 18,
+              "column": 7
             }
           ]
         }
@@ -210,9 +123,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-10T09:34:33.094Z",
-    "duration": 4709.092,
-    "expected": 3,
+    "startTime": "2024-12-10T19:14:14.292Z",
+    "duration": 2451.36,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
